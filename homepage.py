@@ -72,4 +72,4 @@ elif page == "💬 Ask Me Anything":
     ></iframe>
     """
 
-    st.components.v1.html(chatbase_iframe, height=auto)
+    st.components.v1.html(chatbase_iframe, height=700)
