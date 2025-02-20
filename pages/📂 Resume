@@ -10,7 +10,7 @@ elif page == "📂 Resume":
     st.subheader("📖 Education")
     st.write("""
     - **[Masters Data Science]** @ [University Malaya] (03/2022 - 06/2024)
-    - **["Bachelors Business & Commerce - Major in Finance and Banking"]** @ [Monash University Malaysia] (06/2008 - 06/2011)
+    - **[Bachelors Business & Commerce - Major in Finance and Banking]** @ [Monash University Malaysia] (06/2008 - 06/2011)
     """)
 
     st.subheader("🎯 Work Experience")
