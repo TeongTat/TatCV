@@ -38,4 +38,4 @@ if page == "🏆 About Me":
     st.write("🔗 [LinkedIn](https://www.linkedin.com/in/tat-seah/) | [GitHub](https://github.com/TeongTat)")
 
 # Resume Page
-elif page == "📂 Resume":
+elif page == "📂 Resume"
