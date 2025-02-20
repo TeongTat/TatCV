@@ -43,6 +43,10 @@ elif page == "📂 Resume":
 
     st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
 
+    st.subheader("📖 Education")
+    - **[Masters in Data Science]** @ [University Malaya] (03/2022 - 06/2024)
+    - **[Bachelors in Business and Commerce - Major in Finance and Banking]** @ [Monash University Malaysia] (06/2008 - 06/2011)
+
     st.subheader("🎯 Work Experience")
     st.write("""
     - **[Senior Operation Executive]** @ [Fortunata Remit Sdn. Bhd.] (10/2021 - Present)  
