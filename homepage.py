@@ -36,3 +36,6 @@ if page == "🏆 About Me":
     st.subheader("📬 Contact")
     st.write("📧 Email: teongtat@yahoo.com")
     st.write("🔗 [LinkedIn](https://www.linkedin.com/in/tat-seah/) | [GitHub](https://github.com/TeongTat)")
+
+# Resume Page
+elif page == "📂 Resume":
