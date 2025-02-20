@@ -38,4 +38,25 @@ if page == "🏆 About Me":
     st.write("🔗 [LinkedIn](https://www.linkedin.com/in/tat-seah/) | [GitHub](https://github.com/TeongTat)")
 
 # Resume Page
-elif page == "📂 Resume"
+elif page == "📂 Resume":
+    st.title("📄 My Resume")
+
+    with open("resume.pdf", "rb") as file:
+        resume_data = file.read()
+
+    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
+
+    st.subheader("🎯 Work Experience")
+    st.write("""
+    - **[Senior Operation Executive]** @ [Fortunata Remit Sdn. Bhd.] (10/2021 - Present)  
+    - **[Finance Manager (Maternity Replacement)]** @ [ICMC Malaysia] (10/2020 - 3/2021)  
+    - **[Senior Account & Admin Executive]** @ [Ho Car Sdn. Bhd.] (12/2014 - 10/2020)  
+    - **[Intercompany Reconciliation Analyst]** @ [BASF Asia Pacific Service Center] (01/2012 - 07/2014)  
+    """)
+
+    st.subheader("📊 Projects")
+    st.write("""
+    - **[Heart Disease Predictor]**: The modelling will predict user on chances of having heart disease.  
+    - **[Carbon Emission Predictor]**: Predict the CO2 based on Electricity Generation and locations.
+    - **[Stock Price prediction]**: Predict the S&P 500 stock price.
+    """)
