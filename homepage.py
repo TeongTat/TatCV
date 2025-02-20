@@ -21,7 +21,7 @@ if page == "🏆 About Me":
     💡 Passionate about **AI, data analytics, and cloud computing**  
     📍 Based in Selangor, (willing to relocate)  
     """)
-    st.image("IMG_6347.JPG", width=200)  # Optional profile picture
+    st.image("IMG_6347.JPG", width=1200)  # Optional profile picture
 
     # Skills Section
     st.subheader("🛠 Skills & Technologies")
