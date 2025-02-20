@@ -1,25 +1,23 @@
-# Chatbot Page (Chatbase Integration)
-elif page == "💬 Ask Me Anything":
-    st.title("💬 Chat With Me About My Work")
+# Resume Page
+elif page == "📂 Resume":
+    st.title("📄 My Resume")
 
-    user_question = st.text_input("Ask me about my experience, skills, or projects:")
+    with open("resume.pdf", "rb") as file:
+        resume_data = file.read()
 
-    if user_question:
-        # Send request to Chatbase API
-        url = f"https://www.chatbase.co/api/v1/chat"
-        headers = {
-            "Authorization": f"Bearer {CHATBASE_API_KEY}",
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "messages": [{"role": "user", "content": user_question}],
-            "chatbotId": CHATBOT_ID
-        }
+    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
 
-        response = requests.post(url, json=payload, headers=headers)
+    st.subheader("🎯 Work Experience")
+    st.write("""
+    - **[Senior Operation Executive]** @ [Fortunata Remit Sdn. Bhd.] (10/2021 - Present)  
+    - **[Finance Manager (Maternity Replacement)]** @ [ICMC Malaysia] (10/2020 - 3/2021)  
+    - **[Senior Account & Admin Executive]** @ [Ho Car Sdn. Bhd.] (12/2014 - 10/2020)  
+    - **[Intercompany Reconciliation Analyst]** @ [BASF Asia Pacific Service Center] (01/2012 - 07/2014)  
+    """)
 
-        if response.status_code == 200:
-            bot_reply = response.json().get("messages", [{}])[0].get("content", "Sorry, I couldn't process that.")
-            st.write(bot_reply)
-        else:
-            st.error("Error: Unable to fetch response. Check your API key and chatbot ID.")
+    st.subheader("📊 Projects")
+    st.write("""
+    - **[Heart Disease Predictor]**: The modelling will predict user on chances of having heart disease.  
+    - **[Carbon Emission Predictor]**: Predict the CO2 based on Electricity Generation and locations.
+    - **[Stock Price prediction]**: Predict the S&P 500 stock price.
+    """)
