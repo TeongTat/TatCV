@@ -4,10 +4,6 @@ import requests
 # Page Configuration
 st.set_page_config(page_title="My Resume", page_icon="📄", layout="wide")
 
-# Chatbase API Configuration (Replace these with your actual values)
-CHATBASE_API_KEY = "your-chatbase-api-key"
-CHATBOT_ID = "eXS8hNi5rIpgFQkUKz6GD"
-
 # Sidebar Navigation
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to:", ["🏆 About Me", "📂 Resume", "💬 Ask Me Anything"])
@@ -62,28 +58,18 @@ elif page == "📂 Resume":
     - **[Stock Price prediction]**: Predict the S&P 500 stock price.
     """)
     
-# Chatbot Page (Chatbase Integration)
+# Chatbot Page (Chatbase Embed)
 elif page == "💬 Ask Me Anything":
-    st.title("💬 Chat With Me About My Work")
+    st.title("💬 Chat With My AI Chatbot")
 
-    user_question = st.text_input("Ask me about my experience, skills, or projects:")
+    # Replace with your actual Chatbase iframe link
+    chatbase_iframe = """
+    <iframe
+    src="https://www.chatbase.co/chatbot-iframe/eXS8hNi5rIpgFQkUKz6GD"
+    width="100%"
+    style="height: 100%; min-height: 700px"
+    frameborder="0"
+    ></iframe>
+    """
 
-    if user_question:
-        # Send request to Chatbase API
-        url = f"https://www.chatbase.co/api/v1/chat"
-        headers = {
-            "Authorization": f"Bearer {CHATBASE_API_KEY}",
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "messages": [{"role": "user", "content": user_question}],
-            "chatbotId": CHATBOT_ID
-        }
-
-        response = requests.post(url, json=payload, headers=headers)
-
-        if response.status_code == 200:
-            bot_reply = response.json().get("messages", [{}])[0].get("content", "Sorry, I couldn't process that.")
-            st.write(bot_reply)
-        else:
-            st.error("Error: Unable to fetch response. Check your API key and chatbot ID.")
+    st.components.v1.html(chatbase_iframe, height=600)
