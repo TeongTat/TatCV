@@ -1,11 +1,11 @@
 # About Me Page
 if page == "🏆 About Me":
-    st.title("Hi, I'm [Your Name] 👋")
+    st.title("Hi, I'm Teong Tat 👋")
     st.write("""
     🎓 **Master's in Data Science** graduate  
     🔍 Seeking a **Cloud Associate / Data Science Role**  
     💡 Passionate about **AI, data analytics, and cloud computing**  
-    📍 Based in [Your Location]  
+    📍 Based in Selangor, (willing to relocate)  
     """)
     st.image("your_profile_pic.jpg", width=200)  # Optional profile picture
 
@@ -20,5 +20,5 @@ if page == "🏆 About Me":
 
     # Contact Info
     st.subheader("📬 Contact")
-    st.write("📧 Email: [your.email@example.com](mailto:your.email@example.com)")
-    st.write("🔗 [LinkedIn](https://www.linkedin.com/in/yourprofile) | [GitHub](https://github.com/yourgithub)")
+    st.write("📧 Email: teongtat@yahoo.com")
+    st.write("🔗 [LinkedIn](https://www.linkedin.com/in/tat-seah/) | [GitHub](https://github.com/TeongTat)")
