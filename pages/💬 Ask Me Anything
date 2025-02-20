@@ -1,24 +1,25 @@
-# Resume Page
-elif page == "📂 Resume":
-    st.title("📄 My Resume")
+# Chatbot Page (Chatbase Integration)
+elif page == "💬 Ask Me Anything":
+    st.title("💬 Chat With Me About My Work")
 
-    with open("resume.pdf", "rb") as file:
-        resume_data = file.read()
+    user_question = st.text_input("Ask me about my experience, skills, or projects:")
 
-    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
+    if user_question:
+        # Send request to Chatbase API
+        url = f"https://www.chatbase.co/api/v1/chat"
+        headers = {
+            "Authorization": f"Bearer {CHATBASE_API_KEY}",
+            "Content-Type": "application/json"
+        }
+        payload = {
+            "messages": [{"role": "user", "content": user_question}],
+            "chatbotId": CHATBOT_ID
+        }
 
-    st.subheader("🎯 Work Experience")
-    st.write("""
-    - **[Your Latest Job Title]** @ [Company] (Year - Present)  
-      - Key responsibility 1  
-      - Key responsibility 2  
-    - **[Previous Job Title]** @ [Company] (Year - Year)  
-      - Key responsibility 1  
-      - Key responsibility 2  
-    """)
+        response = requests.post(url, json=payload, headers=headers)
 
-    st.subheader("📊 Projects")
-    st.write("""
-    - **[Project 1]**: Brief description of the project.  
-    - **[Project 2]**: Brief description of the project.  
-    """)
+        if response.status_code == 200:
+            bot_reply = response.json().get("messages", [{}])[0].get("content", "Sorry, I couldn't process that.")
+            st.write(bot_reply)
+        else:
+            st.error("Error: Unable to fetch response. Check your API key and chatbot ID.")
