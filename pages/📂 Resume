@@ -8,8 +8,8 @@ elif page == "📂 Resume":
     st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
 
     st.subheader("📖 Education")
-    - **[Masters Data Science]** @ [University Malaya] (03/2022 - 06/2024)
-    - **["Bachelors Business & Commerce - Major in Finance and Banking"]** @ [Monash University Malaysia] (06/2008 - 06/2011)
+    - **[Masters Data Science]** @ [University Malaya] (3/2022 - 6/2024)
+    - **["Bachelors Business & Commerce - Major in Finance and Banking"]** @ [Monash University Malaysia] (6/2008 - 6/2011)
 
     st.subheader("🎯 Work Experience")
     st.write("""
