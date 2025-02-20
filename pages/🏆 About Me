@@ -3,7 +3,7 @@ if page == "🏆 About Me":
     st.title("Hi, I'm Teong Tat 👋")
     st.write("""
     🎓 **Master's in Data Science** graduate  
-    🔍 Seeking a **Cloud Associate / Data Science Role**  
+    🔍 Seeking a **Cloud Associate / Data Science Role / Data Analyst**  
     💡 Passionate about **AI, data analytics, and cloud computing**  
     📍 Based in Selangor, (willing to relocate)  
     """)
@@ -12,7 +12,7 @@ if page == "🏆 About Me":
     # Skills Section
     st.subheader("🛠 Skills & Technologies")
     st.write("""
-    - **Programming:** Python, SQL  
+    - **Programming:** Python, R language  
     - **Data Tools:** Power BI, Tableau, Streamlit  
     - **Cloud Platforms:** AWS, GCP  
     - **Big Data:** Hive, MongoDB, HBase  
