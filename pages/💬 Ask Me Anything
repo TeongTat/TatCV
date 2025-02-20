@@ -1,1 +1,24 @@
+# Resume Page
+elif page == "📂 Resume":
+    st.title("📄 My Resume")
 
+    with open("resume.pdf", "rb") as file:
+        resume_data = file.read()
+
+    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
+
+    st.subheader("🎯 Work Experience")
+    st.write("""
+    - **[Your Latest Job Title]** @ [Company] (Year - Present)  
+      - Key responsibility 1  
+      - Key responsibility 2  
+    - **[Previous Job Title]** @ [Company] (Year - Year)  
+      - Key responsibility 1  
+      - Key responsibility 2  
+    """)
+
+    st.subheader("📊 Projects")
+    st.write("""
+    - **[Project 1]**: Brief description of the project.  
+    - **[Project 2]**: Brief description of the project.  
+    """)
