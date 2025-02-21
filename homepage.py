@@ -35,21 +35,22 @@ if page == "🏆 About Me":
     st.write("📧 Email: teongtat@yahoo.com")
     st.write("🔗 [LinkedIn](https://www.linkedin.com/in/tat-seah/) | [GitHub](https://github.com/TeongTat)")    
 
-# Initialize the modal
-modal = Modal("Chat with Me!", key="chat_modal", max_width=500)
+    st.subheader("💬 Chat with me!")
+    # Initialize the modal
+    modal = Modal("Chat with Me!", key="chat_modal", max_width=500)
 
-# Button to open the modal
-if st.button("Ask My Chatbot!"):
-    modal.open()
+    # Button to open the modal
+    if st.button("Ask My Chatbot!"):
+        modal.open()
 
-# If modal is open, embed Chatbase chatbot
-if modal.is_open():
-    with modal.container():
-        chatbase_url = "https://www.chatbase.co/chatbot-iframe/eXS8hNi5rIpgFQkUKz6GD"  # Replace with your Chatbase bot ID
-        st.markdown(
-            f'<iframe src="{chatbase_url}" width="100%" height="500px" style="border:none;"></iframe>',
-            unsafe_allow_html=True
-        )
+    # If modal is open, embed Chatbase chatbot
+    if modal.is_open():
+        with modal.container():
+            chatbase_url = "https://www.chatbase.co/chatbot-iframe/eXS8hNi5rIpgFQkUKz6GD"  # Replace with your Chatbase bot ID
+            st.markdown(
+                f'<iframe src="{chatbase_url}" width="100%" height="500px" style="border:none;"></iframe>',
+                unsafe_allow_html=True
+            )
 
 # Resume Page
 elif page == "📂 Resume":
