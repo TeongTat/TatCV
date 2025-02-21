@@ -35,7 +35,7 @@ if page == "🏆 About Me":
     st.write("📧 Email: teongtat@yahoo.com")
     st.write("🔗 [LinkedIn](https://www.linkedin.com/in/tat-seah/) | [GitHub](https://github.com/TeongTat)")    
 
-    st.subheader("💬 Chat with me!")
+    st.subheader("💬 Chat with me:")
     # Initialize the modal
     modal = Modal("Chat with Me!", key="chat_modal", max_width=500)
 
