@@ -39,7 +39,7 @@ if page == "🏆 About Me":
 modal = Modal("Chat with Me!", key="chat_modal", max_width=500)
 
 # Button to open the modal
-if st.button("Open Chatbot"):
+if st.button("Ask My Chatbot!"):
     modal.open()
 
 # If modal is open, embed Chatbase chatbot
@@ -82,7 +82,7 @@ elif page == "📂 Resume":
     """)
     
 # Chatbot Page (Chatbase Embed)
-elif page == "💬 Ask Me Anything":
+elif page == "💬 Ask About Me":
     st.title("💬 Chat With My AI Chatbot")
 
     # Replace with your actual Chatbase iframe link
