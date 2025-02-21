@@ -47,7 +47,7 @@ if page == "🏆 About Me":
     # If modal is open, embed Chatbase chatbot
     if modal.is_open():
         with modal.container():
-            chatbase_url = "https://www.chatbase.co/chatbot-iframe/"  # Replace with your Chatbase bot ID
+            chatbase_url = "https://www.chatbase.co/chatbot-iframe/eXS8hNi5rIpgFQkUKz6GD"  # Replace with your Chatbase bot ID
             st.markdown(
                 f'<iframe src="{chatbase_url}" width="100%" height="500px" style="border:none;"></iframe>',
                 unsafe_allow_html=True
