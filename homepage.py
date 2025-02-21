@@ -57,7 +57,7 @@ if page == "🏆 About Me":
 elif page == "📂 Resume":
     st.title("📄 My Resume")
 
-    with open("resume.pdf", "rb") as file:
+    with open("TeongTat_CV_2025.pdf", "rb") as file:
         resume_data = file.read()
 
     st.download_button(label="📥 Download My Resume", data=resume_data, file_name="TeongTat_CV_2025.pdf", mime="application/pdf")
