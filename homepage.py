@@ -1,12 +1,13 @@
 import streamlit as st
 import requests
+from streamlit_modal import Modal
 
 # Page Configuration
 st.set_page_config(page_title="My Resume", page_icon="📄", layout="wide")
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to:", ["🏆 About Me", "📂 Resume", "💬 Ask Me Anything"])
+page = st.sidebar.radio("Go to:", ["🏆 About Me", "📂 Resume"])
 
 # About Me Page
 if page == "🏆 About Me":
