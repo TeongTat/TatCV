@@ -1,5 +1,5 @@
 # Chatbot Page (Chatbase Embed)
-elif page == "💬 Ask Me Anything":
+elif page == "💬 Ask About Me":
     st.title("💬 Chat With My AI Chatbot")
 
     # Replace with your actual Chatbase iframe link
