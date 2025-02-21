@@ -17,7 +17,7 @@ if page == "🏆 About Me":
     🎓 **Master's in Data Science** graduate  
     🔍 Seeking a **Cloud Associate / Data Science Role / Data Analyst**  
     💡 Passionate about **AI, data analytics, and cloud computing**  
-    📍 Based in Selangor, (willing to relocate)  
+    📍 Based in Malaysia, (willing to relocate)  
     """)
     
 
