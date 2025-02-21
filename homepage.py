@@ -60,7 +60,7 @@ elif page == "📂 Resume":
     with open("resume.pdf", "rb") as file:
         resume_data = file.read()
 
-    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="resume.pdf", mime="application/pdf")
+    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="TeongTat_CV_2025.pdf", mime="application/pdf")
 
     st.subheader("📖 Education")
     st.write("""
