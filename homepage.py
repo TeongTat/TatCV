@@ -12,7 +12,7 @@ page = st.sidebar.radio("Go to:", ["🏆 About Me", "📂 Resume"])
 # About Me Page
 if page == "🏆 About Me":
     st.title("Hi, I'm Teong Tat 👋")
-    st.image("IMG_6347.JPG", width=500)  # Optional profile picture
+    st.image("IMG_6347.JPG", width=600)  # Optional profile picture
     st.write("""
     🎓 **Master's in Data Science** graduate  
     🔍 Seeking a **Cloud Associate / Data Science Role / Data Analyst**  
