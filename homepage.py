@@ -38,13 +38,13 @@ st.title("Chatbase in Modal")
 
 modal = modal("Chatbot", key="chat_modal", max_width=500)
 
-if st.button("Open Chatbot"):
+    if st.button("Open Chatbot"):
     modal.open()
 
-if modal.is_open():
-    with modal.container():
-        chatbase_url = "https://www.chatbase.co/chatbot-iframe/eXS8hNi5rIpgFQkUKz6GD"  # Replace with your bot ID
-        st.markdown(f'<iframe src="{chatbase_url}" width="100%" height="500px"></iframe>', unsafe_allow_html=True)
+    if modal.is_open():
+        with modal.container():
+            chatbase_url = "https://www.chatbase.co/chatbot-iframe/eXS8hNi5rIpgFQkUKz6GD"  # Replace with your bot ID
+            st.markdown(f'<iframe src="{chatbase_url}" width="100%" height="500px"></iframe>', unsafe_allow_html=True)
 
 # Resume Page
 elif page == "📂 Resume":
