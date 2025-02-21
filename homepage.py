@@ -36,7 +36,7 @@ if page == "🏆 About Me":
 
 st.title("Chatbase in Modal")
 
-modal = Modal("Chatbot", key="chat_modal", max_width=500)
+modal = modal("Chatbot", key="chat_modal", max_width=500)
 
 if st.button("Open Chatbot"):
     modal.open()
