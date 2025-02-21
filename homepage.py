@@ -39,7 +39,7 @@ st.title("Chatbase in Modal")
 modal = modal("Chatbot", key="chat_modal", max_width=500)
 
     if st.button("Open Chatbot"):
-    modal.open()
+        modal.open()
 
     if modal.is_open():
         with modal.container():
