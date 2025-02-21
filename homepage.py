@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-from streamlit import Modal
+from streamlit_modal import Modal
 
 # Page Configuration
 st.set_page_config(page_title="My Resume", page_icon="📄", layout="wide")
