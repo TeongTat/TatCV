@@ -52,6 +52,12 @@ if page == "🏆 About Me":
                 f'<iframe src="{chatbase_url}" width="100%" height="500px" style="border:none;"></iframe>',
                 unsafe_allow_html=True
             )
+    
+    st.subheader("📄 My Resume")
+    with open("TeongTat_CV_2025.pdf", "rb") as file:
+        resume_data = file.read()
+
+    st.download_button(label="📥 Download My Resume", data=resume_data, file_name="TeongTat_CV_2025.pdf", mime="application/pdf")
 
 # Resume Page
 elif page == "📂 Resume":
