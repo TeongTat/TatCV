@@ -1,3 +1,17 @@
 streamlit_modal
 Streamlit
 requests
+pandas
+plotly
+numpy 
+matplotlib
+scikit-learn
+shapely
+statsmodels
+seaborn
+shapely
+folium
+streamlit-folium
+geopandas
+yfinance
+lxml
